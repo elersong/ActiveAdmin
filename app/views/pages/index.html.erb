@@ -1,0 +1,30 @@
+<h1>Listing pages</h1> 
+
+<table>
+	<thead> 
+		<tr>
+			<th>Title</th> 
+			<th>Slug</th> 
+			<th>Content</th> 
+			<th></th> 
+			<th></th> 
+			<th></th>
+		</tr>
+	</thead>
+	<tbody> 
+		<% @pages.each do |page| %>
+		<tr> 
+			<td> <%= page.title %> </td> 
+			<td> <%= page.slug %> </td> 
+			<td> <%= page.content %> </td>
+		</tr> 
+		<% end %> 
+	</tbody>
+</table> 
+
+<h1>Posts#index</h1> 
+<% @posts.each do |post| %>
+	<%= post.title %> - <%= link_to 'Read Post', post %><br /> 
+<% end %>
+
+<%= link_to "New Page", new_page_path %>

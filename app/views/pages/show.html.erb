@@ -1,0 +1,19 @@
+<p> 
+	<strong>Title:</strong> 
+	<%= @page.title %>
+</p>
+<p> 
+	<strong>Slug:</strong> 
+	<%= @page.slug %>
+</p>
+<p> 
+	<strong>Content:</strong> 
+	<%= @page.content %>
+</p>
+
+<%= link_to "Pages List", '/pages' %>
+
+<p> <strong>Title:</strong> <%= @post.title %>
+</p>
+<p> <%= @post.content %>
+</p> <%= link_to 'Back', posts_path %>
