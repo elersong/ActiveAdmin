@@ -44,3 +44,6 @@ gem 'devise'
 
 # pretty URLs
 gem 'friendly_id', '~> 5.0.0'
+
+# meta-data management
+gem 'metamagic'

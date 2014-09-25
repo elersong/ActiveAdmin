@@ -1,3 +1,8 @@
+<% meta :title => "Pages Listing",
+		:description => "The Jump Start Rails App", 
+		:keywords => %w(rails ruby on rails Rails)
+%>
+
 <h1>Listing pages</h1> 
 
 <table>
@@ -22,9 +27,6 @@
 	</tbody>
 </table> 
 
-<h1>Posts#index</h1> 
-<% @posts.each do |post| %>
-	<%= post.title %> - <%= link_to 'Read Post', post %><br /> 
-<% end %>
+
 
 <%= link_to "New Page", new_page_path %>
