@@ -2,8 +2,9 @@ ActiveAdmin.register Post do
   
   scope :rails
 
-  permit_params :title, :slug, :blurb, :content, :category_id
+  permit_params :title, :slug, :blurb, :content, :category_id, :image
   
+  # this index call specifies which properties will be visible in the listing of all Posts within admin
   index do
     column :title
     column :slug

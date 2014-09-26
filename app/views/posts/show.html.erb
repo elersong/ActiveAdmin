@@ -6,6 +6,9 @@
 	<strong>Title: </strong><%= @post.title %>
 </p>
 <p>
+	<%= image_tag @post.image_url.to_s %>
+</p>
+<p>
 	<%= @post.content %>
 </p>
 <%= link_to 'Back', posts_path %>

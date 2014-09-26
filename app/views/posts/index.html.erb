@@ -1,4 +1,7 @@
-<h1>Posts#index</h1>
+<h1>Posts#index (Lists all Posts)</h1>
 <% @posts.each do |post| %>
+	<% # the following line is enough to link the |post| block variable to its saved image path 
+	%>
+	<%= image_tag post.image_url(:thumb) %> 
 	<%= post.title %> - <%= link_to 'Read Post', post %> <br/>
 <% end %>
