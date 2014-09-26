@@ -12,6 +12,25 @@ ActiveAdmin.register Post do
     column :created_at
     actions
   end
+  
+  # this should customize the layout for a single-post page
+  show do |post|
+    attributes_table do
+      row :id
+      row :title
+      row :slug
+      row :blurb
+      row :category
+      row :content
+      row :image do
+        link_to(post.image.url, post.image.url)
+      end
+      row :image do
+        image_tag(post.image.url(:thumb))
+      end
+    end
+    active_admin_comments
+  end
 
   form :html => {:enctype => "multipart/form-data"} do |f|
     f.inputs "Details" do
